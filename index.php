@@ -9,10 +9,9 @@
     $lastName = $_GET['lastname'];
     $password = $_GET['password'];
 
-    $censoredPass = str_replace($password, '***', $password);
-
-    $welcomeTxt = 'Hello ' . $name . ' ' . $lastName . ', this is your censored password: ' . $censoredPass;
-
+    
+    $welcomeTxt = 'Hello ' . $name . ' ' . $lastName . ', this is your password: ' . $password;
+    
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +30,9 @@
 
     <h2 style="color:green">
         <?php
-            echo $welcomeTxt;
+        
+            echo str_replace($password, '***', $welcomeTxt);
+
         ?>
 
     </h2>
