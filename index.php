@@ -32,9 +32,28 @@
 
     <h2 style="color:green">
         <?php
-        $splittedString = str_replace($phpVar, '***', $phpVar);
-        var_dump($splittedString);
+        
         ?>
+
+        <h1 style="color:red">
+            <?php 
+                echo $_GET['name'];
+            ?>
+
+            <br>
+
+            <?php 
+                echo $_GET['lastname'];
+            ?>
+
+            <br>
+
+            <?php 
+                $censrored = $_GET['password'];
+                $censrored = str_replace($censrored, '***', $censrored);
+                echo $censrored;
+            ?>
+        </h1>
     </h2>
 </body>
 
