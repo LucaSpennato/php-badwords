@@ -5,8 +5,13 @@
 // Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre asterischi 
 // (***) tutte le occorrenze della parola da censurare. 
 
-    $phpVar = 'hello there';
-    // $explTest =  explode( ',', $phpVar );
+    $name = $_GET['name'];
+    $lastName = $_GET['lastname'];
+    $password = $_GET['password'];
+
+    $censoredPass = str_replace($password, '***', $password);
+
+    $welcomeTxt = 'Hello ' . $name . ' ' . $lastName . ', this is your censored password: ' . $censoredPass;
 
 ?>
 
@@ -24,36 +29,11 @@
 
     <h1>PHP exercise</h1>
 
-    <h5>
-        <?php
-        echo $phpVar;
-        ?>
-    </h5>
-
     <h2 style="color:green">
         <?php
-        
+            echo $welcomeTxt;
         ?>
 
-        <h1 style="color:red">
-            <?php 
-                echo $_GET['name'];
-            ?>
-
-            <br>
-
-            <?php 
-                echo $_GET['lastname'];
-            ?>
-
-            <br>
-
-            <?php 
-                $censrored = $_GET['password'];
-                $censrored = str_replace($censrored, '***', $censrored);
-                echo $censrored;
-            ?>
-        </h1>
     </h2>
 </body>
 
