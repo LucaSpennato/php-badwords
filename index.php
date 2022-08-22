@@ -6,6 +6,7 @@
 // (***) tutte le occorrenze della parola da censurare. 
 
     $phpVar = 'hello there';
+    // $explTest =  explode( ',', $phpVar );
 
 ?>
 
@@ -19,16 +20,22 @@
     <title>Document</title>
 </head>
 
-    <body>
+<body>
 
-        <h1>PHP exercise</h1>
+    <h1>PHP exercise</h1>
 
-        <h5>
-            <?php
-                echo $phpVar;
-            ?>
-        </h5>
+    <h5>
+        <?php
+        echo $phpVar;
+        ?>
+    </h5>
 
-    </body>
+    <h2 style="color:green">
+        <?php
+        $splittedString = str_replace($phpVar, '***', $phpVar);
+        var_dump($splittedString);
+        ?>
+    </h2>
+</body>
 
 </html>
